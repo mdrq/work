@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+      // OnePiece
+      $this->app->bind(
+        \App\Repositories\OnePiece\CharacterRepositoryInterface::class,
+        \App\Repositories\OnePiece\CharacterRepository::class
+      );
     }
 
     /**
